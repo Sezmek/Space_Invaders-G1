@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class Invader : MonoBehaviour
 
     public float animationTime;
 
+    public Action died;
 
     private SpriteRenderer _spriteRenderer;
 
@@ -27,5 +29,11 @@ public class Invader : MonoBehaviour
         _animationFrame++;
         if (_animationFrame >= animationSprites.Length) _animationFrame = 0;
         _spriteRenderer.sprite = animationSprites[_animationFrame];
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        died.Invoke();
+        gameObject.SetActive(false);
     }
 }
