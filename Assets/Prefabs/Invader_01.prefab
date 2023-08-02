@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -6122098364307700985, guid: a5b437fb525f68c4eb9396509ccbd544, type: 3}
+      propertyPath: Explosion
+      value: 
+      objectReference: {fileID: 9042725886276243591, guid: d747aac918667264eb773a8eeb8e1ade, type: 3}
+    - target: {fileID: -6122098364307700985, guid: a5b437fb525f68c4eb9396509ccbd544, type: 3}
       propertyPath: animationTime
       value: 0.5
       objectReference: {fileID: 0}

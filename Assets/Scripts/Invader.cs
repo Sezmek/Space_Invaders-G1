@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Invader : MonoBehaviour
 {
+
+    public SelfDestruct Explosion;
+
     public Sprite[] animationSprites;
 
     public float animationTime;
@@ -35,5 +38,7 @@ public class Invader : MonoBehaviour
     {
         died.Invoke();
         gameObject.SetActive(false);
+        SelfDestruct explosion = Instantiate(Explosion);
+        explosion.transform.position = transform.position;
     }
 }
